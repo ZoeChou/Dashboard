@@ -1,0 +1,20 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin-left:3%;
+}
+	  
+p{
+    color: #ffffff;
+	text-align: center;
+}
+	  
+.super-box{
+	height: 8em;
+	background-color: #2F0F6A;
+	margin-right:1em; 
+	margin-left:1em; 
+	margin-bottom:20px; 
+	border: 1px solid 000000;
+}
+
+
