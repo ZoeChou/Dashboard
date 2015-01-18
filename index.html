@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.0/angular.min.js"></script>
+  <script src="js/ng-controller.js"></script>
+  <script src="js/service.js"></script>
+  
+
+  
+</head>
+<body>
+<div ng-app="DashboardCtrl" ng-controller="DashboardController as index">
+  <b>Test</b>
+  <div>
+    Quantity: <input type="number" min="0" ng-model="index.qty" required >
+  </div>
+  <div>
+    Costs: <input type="number" min="0" ng-model="index.cost" required >
+    <select ng-model="index.inCurr">
+      <option ng-repeat="c in index.currencies">{{c}}</option>
+    </select>
+  </div>
+  <div>
+    <b>Total:</b>
+    <span ng-repeat="c in index.currencies">
+      {{index.total(c) | currency:c}}
+    </span>
+    <button class="btn" ng-click="index.pay()">Pay</button>
+  </div>
+</div>
+</body>
+
+</html>
